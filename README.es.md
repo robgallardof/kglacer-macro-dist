@@ -17,20 +17,15 @@
 <p align="center"><a href="#install"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-es-01-dark.svg" /><img src="assets/readme-builder/kit/nav-es-01-light.svg" alt="01 Instalar" height="34" /></picture></a>&nbsp;
 <a href="#updates"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-es-02-dark.svg" /><img src="assets/readme-builder/kit/nav-es-02-light.svg" alt="02 Actualizaciones" height="34" /></picture></a>&nbsp;
 <a href="#companion"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-es-03-dark.svg" /><img src="assets/readme-builder/kit/nav-es-03-light.svg" alt="03 Extensión" height="34" /></picture></a>&nbsp;
-<a href="#security"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-es-04-dark.svg" /><img src="assets/readme-builder/kit/nav-es-04-light.svg" alt="04 Seguridad" height="34" /></picture></a>&nbsp;
-<a href="#help"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-es-05-dark.svg" /><img src="assets/readme-builder/kit/nav-es-05-light.svg" alt="Ayuda" height="34" /></picture></a></p>
+<a href="#help"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-es-04-dark.svg" /><img src="assets/readme-builder/kit/nav-es-04-light.svg" alt="Ayuda" height="34" /></picture></a></p>
 <!-- /kit:nav -->
 
-Carga tus imágenes, organiza plantillas y trabaja en [wplace.live](https://wplace.live) desde un solo panel. Este repositorio contiene el **instalador oficial firmado**: descarga cada versión, comprueba su firma y solo entonces la ejecuta.
+Carga tus imágenes, organiza plantillas y trabaja en [wplace.live](https://wplace.live) desde un solo panel. Instálalo una vez y se mantiene actualizado solo.
 
 <!-- kit:downloads -->
 <p align="center"><a href="https://raw.githubusercontent.com/robgallardof/kglacer-macro-dist/main/loader.user.js"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/downloads-es-01-dark.svg" /><img src="assets/readme-builder/kit/downloads-es-01-light.svg" alt="Instalar KGlacerMacro" height="44" /></picture></a>&nbsp;
 <a href="https://chromewebstore.google.com/detail/gcalenpjmijncebpfijmoaglllgpjagf"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/downloads-es-02-dark.svg" /><img src="assets/readme-builder/kit/downloads-es-02-light.svg" alt="Tampermonkey Beta" height="44" /></picture></a></p>
 <!-- /kit:downloads -->
-
-<!-- kit:facts -->
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/facts-es-dark.svg" /><img src="assets/readme-builder/kit/facts-es-light.svg" alt="Ed25519 versiones firmadas · SHA-256 verificado antes de ejecutar · Auto actualizaciones en segundo plano · Offline última copia verificada" width="100%" /></picture></p>
-<!-- /kit:facts -->
 
 ![Diseño ilustrativo del panel de KGlacerMacro](assets/guide/desktop-es.svg)
 
@@ -95,44 +90,6 @@ La entrada automática usa la extensión opcional **KGlacer Input Companion**. E
 2. Elige la carpeta `kglacer-input-companion` que contiene `manifest.json`.
 3. En la pestaña de wplace.live, haz clic en el icono de la extensión para activar la entrada en esa pestaña.
 4. En el panel, entra en **Config** y pulsa **Probar conexión**.
-
-<!-- kit:wave -->
-<p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>
-<!-- /kit:wave -->
-
-<a id="security"></a>
-
-<!-- kit:h-security -->
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/h-security-es-dark.svg" /><img src="assets/readme-builder/kit/h-security-es-light.svg" alt="Cómo se protegen las versiones" width="100%" /></picture></p>
-<!-- /kit:h-security -->
-
-Cada versión oficial está firmada con la llave del mantenedor. El instalador fija la llave pública (su id aparece en el encabezado del script) y revisa cada versión en tu equipo antes de ejecutarla.
-
-<!-- kit:protections -->
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/protections-es-dark.svg" /><img src="assets/readme-builder/kit/protections-es-light.svg" alt="Solo versiones oficiales: El manifiesto debe tener una firma Ed25519 válida de la llave fijada. · Nada alterado en el camino: Tamaño y SHA-256 se comprueban antes de ejecutar código. · Nunca a una versión vieja: Se rechazan versiones anteriores a una ya aceptada. · Funciona si el servidor cae: La última copia verificada sigue funcionando desde tu navegador." width="100%" /></picture></p>
-<!-- /kit:protections -->
-
-Si una comprobación falla, **no se ejecuta nada** y verás un aviso breve. El instalador no está minificado a propósito, para que puedas leer exactamente qué hace.
-
-La firma demuestra de dónde viene una versión y que nadie la alteró. **No** oculta el código: todo lo que se ejecuta en tu navegador se puede inspeccionar.
-
-Cada nota de versión incluye el SHA-256 del instalador. Compáralo con tu copia (`certutil -hashfile loader.user.js SHA256` en Windows):
-
-<!-- kit:verify -->
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/verify-es-dark.svg" /><img src="assets/readme-builder/kit/verify-es-light.svg" alt="$ sha256sum loader.user.js / 3d2e65ce5b9e13bd0c8509199ccc3ee655d9a93e18e8e644c17b2ad45c4e5590  loader.user.js" width="100%" /></picture></p>
-<!-- /kit:verify -->
-
-<!-- kit:wave -->
-<p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>
-<!-- /kit:wave -->
-
-<a id="data"></a>
-
-<!-- kit:h-data -->
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/h-data-es-dark.svg" /><img src="assets/readme-builder/kit/h-data-es-light.svg" alt="Tus datos" width="100%" /></picture></p>
-<!-- /kit:h-data -->
-
-KGlacerMacro inicia sesión mediante su Control API y, como indican los metadatos del script, sincroniza a través de ella tu token de sesión de wplace (`j`). Instálalo solo si lo aceptas.
 
 <!-- kit:wave -->
 <p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>

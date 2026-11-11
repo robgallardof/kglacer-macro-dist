@@ -17,20 +17,15 @@
 <p align="center"><a href="#install"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-en-01-dark.svg" /><img src="assets/readme-builder/kit/nav-en-01-light.svg" alt="01 Install" height="34" /></picture></a>&nbsp;
 <a href="#updates"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-en-02-dark.svg" /><img src="assets/readme-builder/kit/nav-en-02-light.svg" alt="02 Updates" height="34" /></picture></a>&nbsp;
 <a href="#companion"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-en-03-dark.svg" /><img src="assets/readme-builder/kit/nav-en-03-light.svg" alt="03 Extension" height="34" /></picture></a>&nbsp;
-<a href="#security"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-en-04-dark.svg" /><img src="assets/readme-builder/kit/nav-en-04-light.svg" alt="04 Security" height="34" /></picture></a>&nbsp;
-<a href="#help"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-en-05-dark.svg" /><img src="assets/readme-builder/kit/nav-en-05-light.svg" alt="Help" height="34" /></picture></a></p>
+<a href="#help"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-en-04-dark.svg" /><img src="assets/readme-builder/kit/nav-en-04-light.svg" alt="Help" height="34" /></picture></a></p>
 <!-- /kit:nav -->
 
-Load your images, organize templates and work on [wplace.live](https://wplace.live) from one panel. This repository hosts the **official signed installer**: it downloads each release, checks its signature and only then runs it.
+Load your images, organize templates and work on [wplace.live](https://wplace.live) from one panel. Install it once and it keeps itself up to date.
 
 <!-- kit:downloads -->
 <p align="center"><a href="https://raw.githubusercontent.com/robgallardof/kglacer-macro-dist/main/loader.user.js"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/downloads-en-01-dark.svg" /><img src="assets/readme-builder/kit/downloads-en-01-light.svg" alt="Install KGlacerMacro" height="44" /></picture></a>&nbsp;
 <a href="https://chromewebstore.google.com/detail/gcalenpjmijncebpfijmoaglllgpjagf"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/downloads-en-02-dark.svg" /><img src="assets/readme-builder/kit/downloads-en-02-light.svg" alt="Tampermonkey Beta" height="44" /></picture></a></p>
 <!-- /kit:downloads -->
-
-<!-- kit:facts -->
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/facts-en-dark.svg" /><img src="assets/readme-builder/kit/facts-en-light.svg" alt="Ed25519 signed releases · SHA-256 checked before running · Auto background updates · Offline last verified copy" width="100%" /></picture></p>
-<!-- /kit:facts -->
 
 ![Illustrative KGlacerMacro panel layout](assets/guide/desktop-en.svg)
 
@@ -95,44 +90,6 @@ Automatic input uses the optional **KGlacer Input Companion**. The panel's **Dow
 2. Select the `kglacer-input-companion` folder that contains `manifest.json`.
 3. On the wplace.live tab, click the extension icon to turn input on for that tab.
 4. In the panel, go to **Config** and click **Test connection**.
-
-<!-- kit:wave -->
-<p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>
-<!-- /kit:wave -->
-
-<a id="security"></a>
-
-<!-- kit:h-security -->
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/h-security-en-dark.svg" /><img src="assets/readme-builder/kit/h-security-en-light.svg" alt="How releases are protected" width="100%" /></picture></p>
-<!-- /kit:h-security -->
-
-Every official release is signed with the maintainer's key. The installer pins the public key (its id is in the script header) and checks every release on your machine before running it.
-
-<!-- kit:protections -->
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/protections-en-dark.svg" /><img src="assets/readme-builder/kit/protections-en-light.svg" alt="Only official releases: The manifest must carry a valid Ed25519 signature from the pinned key. · Nothing altered on the way: Size and SHA-256 are checked before any code runs. · Never back to an old version: Releases older than one already trusted are refused. · Works if the server is down: The last verified copy keeps running from local storage." width="100%" /></picture></p>
-<!-- /kit:protections -->
-
-If a check fails, **nothing is run** and you see a short message. The installer is deliberately not minified, so you can read exactly what it does.
-
-Signing proves where a release comes from and that it was not altered. It does **not** hide the code: everything that runs in your browser can be inspected.
-
-Every release note lists the installer's SHA-256. Compare it with your copy (`certutil -hashfile loader.user.js SHA256` on Windows):
-
-<!-- kit:verify -->
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/verify-en-dark.svg" /><img src="assets/readme-builder/kit/verify-en-light.svg" alt="$ sha256sum loader.user.js / 3d2e65ce5b9e13bd0c8509199ccc3ee655d9a93e18e8e644c17b2ad45c4e5590  loader.user.js" width="100%" /></picture></p>
-<!-- /kit:verify -->
-
-<!-- kit:wave -->
-<p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>
-<!-- /kit:wave -->
-
-<a id="data"></a>
-
-<!-- kit:h-data -->
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/h-data-en-dark.svg" /><img src="assets/readme-builder/kit/h-data-en-light.svg" alt="Your data" width="100%" /></picture></p>
-<!-- /kit:h-data -->
-
-KGlacerMacro signs you in through its Control API and, as stated in the script metadata, syncs your wplace session token (`j`) through it. Only install it if you accept that.
 
 <!-- kit:wave -->
 <p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>
