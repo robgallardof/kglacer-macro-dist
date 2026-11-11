@@ -20,11 +20,12 @@
 <a href="#help"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-es-04-dark.svg" /><img src="assets/readme-builder/kit/nav-es-04-light.svg" alt="Ayuda" height="34" /></picture></a></p>
 <!-- /kit:nav -->
 
-Carga tus imágenes, organiza plantillas y trabaja en [wplace.live](https://wplace.live) desde un solo panel. Instálalo una vez y se mantiene actualizado solo.
+Carga tus imágenes, organiza plantillas y trabaja desde un solo panel. Instálalo una vez y se mantiene actualizado solo.
 
 <!-- kit:downloads -->
 <p align="center"><a href="https://raw.githubusercontent.com/robgallardof/kglacer-macro-dist/main/loader.user.js"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/downloads-es-01-dark.svg" /><img src="assets/readme-builder/kit/downloads-es-01-light.svg" alt="Instalar KGlacerMacro" height="44" /></picture></a>&nbsp;
-<a href="https://chromewebstore.google.com/detail/gcalenpjmijncebpfijmoaglllgpjagf"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/downloads-es-02-dark.svg" /><img src="assets/readme-builder/kit/downloads-es-02-light.svg" alt="Tampermonkey Beta" height="44" /></picture></a></p>
+<a href="https://releases.robertogallardo.dev/latest/kglacer-input-companion.zip"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/downloads-es-02-dark.svg" /><img src="assets/readme-builder/kit/downloads-es-02-light.svg" alt="Descargar extensión" height="44" /></picture></a>&nbsp;
+<a href="https://chromewebstore.google.com/detail/gcalenpjmijncebpfijmoaglllgpjagf"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/downloads-es-03-dark.svg" /><img src="assets/readme-builder/kit/downloads-es-03-light.svg" alt="Tampermonkey Beta" height="44" /></picture></a></p>
 <!-- /kit:downloads -->
 
 ![Diseño ilustrativo del panel de KGlacerMacro](assets/guide/desktop-es.svg)
@@ -54,7 +55,7 @@ Carga tus imágenes, organiza plantillas y trabaja en [wplace.live](https://wpla
 
 4. Haz clic en **[Instalar KGlacerMacro](https://raw.githubusercontent.com/robgallardof/kglacer-macro-dist/main/loader.user.js)** y luego en **Instalar** en la página de Tampermonkey.
 
-Abre o recarga [wplace.live](https://wplace.live). La primera vez se descarga la versión actual; después arranca al instante desde la copia verificada en tu navegador.
+Recarga la página del mapa. La primera vez se descarga la versión actual; después arranca al instante desde la copia verificada en tu navegador.
 
 > **¿Ya usabas KGlacerMacro?** Tampermonkey mostrará **Actualizar** en lugar de Instalar. Se conservan tus imágenes, plantillas y ajustes.
 
@@ -84,11 +85,11 @@ El instalador (`loader.user.js`) casi nunca cambia; Tampermonkey lo mantiene al 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/h-companion-es-dark.svg" /><img src="assets/readme-builder/kit/h-companion-es-light.svg" alt="Conecta la extensión" width="100%" /></picture></p>
 <!-- /kit:h-companion -->
 
-La entrada automática usa la extensión opcional **KGlacer Input Companion**. El botón **Descargar ZIP de la extensión** del panel siempre corresponde a tu versión.
+La entrada automática usa la extensión opcional **KGlacer Input Companion**. Descárgala con **[Descargar extensión](https://releases.robertogallardo.dev/latest/kglacer-input-companion.zip)** (siempre la versión actual) o con el botón **Descargar ZIP de la extensión** del panel.
 
 1. Descomprímela, abre la página de extensiones, activa el **Modo de desarrollador** y pulsa **Cargar descomprimida**.
 2. Elige la carpeta `kglacer-input-companion` que contiene `manifest.json`.
-3. En la pestaña de wplace.live, haz clic en el icono de la extensión para activar la entrada en esa pestaña.
+3. En la pestaña del mapa, haz clic en el icono de la extensión para activar la entrada en esa pestaña.
 4. En el panel, entra en **Config** y pulsa **Probar conexión**.
 
 <!-- kit:wave -->
@@ -106,7 +107,7 @@ La entrada automática usa la extensión opcional **KGlacer Input Companion**. E
 | "No se pudo verificar ni descargar" | No se ejecutó nada sin verificar. Revisa tu conexión y recarga. |
 | "necesita el loader … o posterior" | Tampermonkey → Panel → KGlacerMacro → **Buscar actualizaciones**. |
 | "Se rechazó una versión anterior" | No hay que hacer nada: sigues con la versión verificada que ya tenías. |
-| No pasa nada en wplace.live | Revisa que **Permitir secuencias de comandos de usuario** esté activo y que el script esté habilitado en Tampermonkey. |
+| No pasa nada en la página del mapa | Revisa que **Permitir secuencias de comandos de usuario** esté activo y que el script esté habilitado en Tampermonkey. |
 | Sigue sin funcionar | Pulsa F12 e incluye en tu reporte las líneas de la consola que empiezan con `[KGM][Loader]`. |
 
 <!-- kit:support -->

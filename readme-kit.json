@@ -105,6 +105,16 @@
           "trailing": true
         },
         {
+          "label": {
+            "en": "Download extension",
+            "es": "Descargar extensión"
+          },
+          "href": "https://releases.robertogallardo.dev/latest/kglacer-input-companion.zip",
+          "icon": "box",
+          "variant": "outline",
+          "trailing": true
+        },
+        {
           "label": "Tampermonkey Beta",
           "href": "https://chromewebstore.google.com/detail/gcalenpjmijncebpfijmoaglllgpjagf",
           "icon": "globe",
