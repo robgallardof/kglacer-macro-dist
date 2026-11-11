@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "theme": "nebula",
+  "assets": "assets/readme-builder/kit",
+  "documents": {
+    "README.md": "en",
+    "README.es.md": "es"
+  },
+  "blocks": [
+    {
+      "id": "lang",
+      "type": "buttons",
+      "align": "right",
+      "items": [
+        { "label": "English", "href": "README.md", "icon": "globe", "small": true, "variant": { "en": "primary", "es": "outline" } },
+        { "label": "Español", "href": "README.es.md", "icon": "globe", "small": true, "variant": { "en": "outline", "es": "primary" } }
+      ]
+    },
+    {
+      "id": "hero",
+      "type": "heading",
+      "number": "KG",
+      "kicker": { "en": "KGLACERMACRO / SIGNED INSTALLER", "es": "KGLACERMACRO / INSTALADOR FIRMADO" },
+      "title": { "en": "Install once, stay up to date", "es": "Instala una vez, siempre al día" },
+      "icon": "shield"
+    },
+    {
+      "id": "nav",
+      "type": "buttons",
+      "items": [
+        { "label": { "en": "01 Install", "es": "01 Instalar" }, "href": "#install", "icon": "download", "small": true },
+        { "label": { "en": "02 Updates", "es": "02 Actualizaciones" }, "href": "#updates", "icon": "repeat", "small": true },
+        { "label": { "en": "03 Extension", "es": "03 Extensión" }, "href": "#companion", "icon": "settings", "small": true },
+        { "label": { "en": "04 Security", "es": "04 Seguridad" }, "href": "#security", "icon": "lock", "small": true },
+        { "label": { "en": "Help", "es": "Ayuda" }, "href": "#help", "icon": "book", "small": true }
+      ]
+    },
+    {
+      "id": "downloads",
+      "type": "buttons",
+      "items": [
+        {
+          "label": { "en": "Install KGlacerMacro", "es": "Instalar KGlacerMacro" },
+          "href": "https://raw.githubusercontent.com/robgallardof/kglacer-macro-dist/main/loader.user.js",
+          "icon": "download",
+          "variant": "primary",
+          "trailing": true
+        },
+        {
+          "label": "Tampermonkey Beta",
+          "href": "https://chromewebstore.google.com/detail/gcalenpjmijncebpfijmoaglllgpjagf",
+          "icon": "globe",
+          "variant": "outline",
+          "trailing": true
+        }
+      ]
+    },
+    {
+      "id": "facts",
+      "type": "stats",
+      "items": [
+        { "value": "Ed25519", "label": { "en": "signed releases", "es": "versiones firmadas" } },
+        { "value": "SHA-256", "label": { "en": "checked before running", "es": "verificado antes de ejecutar" } },
+        { "value": "Auto", "label": { "en": "background updates", "es": "actualizaciones en segundo plano" } },
+        { "value": "Offline", "label": { "en": "last verified copy", "es": "última copia verificada" } }
+      ]
+    },
+    { "id": "wave", "type": "divider" },
+    {
+      "id": "h-install",
+      "type": "heading",
+      "number": "01",
+      "kicker": { "en": "USER GUIDE", "es": "GUÍA DE USO" },
+      "title": { "en": "Install in four steps", "es": "Instala en cuatro pasos" },
+      "icon": "download"
+    },
+    {
+      "id": "browser-pages",
+      "type": "buttons",
+      "items": [
+        { "label": "Chrome / Brave", "href": "chrome://extensions", "icon": "globe", "small": true },
+        { "label": "Edge", "href": "edge://extensions", "icon": "globe", "small": true },
+        { "label": "Opera / Opera GX", "href": "opera://extensions", "icon": "globe", "small": true },
+        { "label": "Vivaldi", "href": "vivaldi://extensions", "icon": "globe", "small": true }
+      ]
+    },
+    {
+      "id": "h-updates",
+      "type": "heading",
+      "number": "02",
+      "kicker": { "en": "USER GUIDE", "es": "GUÍA DE USO" },
+      "title": { "en": "Updates take care of themselves", "es": "Las actualizaciones llegan solas" },
+      "icon": "repeat"
+    },
+    {
+      "id": "h-companion",
+      "type": "heading",
+      "number": "03",
+      "kicker": { "en": "USER GUIDE", "es": "GUÍA DE USO" },
+      "title": { "en": "Connect the companion", "es": "Conecta la extensión" },
+      "icon": "settings"
+    },
+    {
+      "id": "h-security",
+      "type": "heading",
+      "number": "04",
+      "kicker": { "en": "TRUST", "es": "CONFIANZA" },
+      "title": { "en": "How releases are protected", "es": "Cómo se protegen las versiones" },
+      "icon": "lock"
+    },
+    {
+      "id": "protections",
+      "type": "bento",
+      "columns": 2,
+      "cells": [
+        {
+          "icon": "lucide-shield-check",
+          "kicker": { "en": "SIGNATURE", "es": "FIRMA" },
+          "title": { "en": "Only official releases", "es": "Solo versiones oficiales" },
+          "text": { "en": "The manifest must carry a valid Ed25519 signature from the pinned key.", "es": "El manifiesto debe tener una firma Ed25519 válida de la llave fijada." }
+        },
+        {
+          "icon": "check",
+          "kicker": { "en": "INTEGRITY", "es": "INTEGRIDAD" },
+          "title": { "en": "Nothing altered on the way", "es": "Nada alterado en el camino" },
+          "text": { "en": "Size and SHA-256 are checked before any code runs.", "es": "Tamaño y SHA-256 se comprueban antes de ejecutar código." }
+        },
+        {
+          "icon": "flag",
+          "kicker": { "en": "NO DOWNGRADES", "es": "SIN RETROCESOS" },
+          "title": { "en": "Never back to an old version", "es": "Nunca a una versión vieja" },
+          "text": { "en": "Releases older than one already trusted are refused.", "es": "Se rechazan versiones anteriores a una ya aceptada." }
+        },
+        {
+          "icon": "database",
+          "kicker": { "en": "RESILIENT", "es": "RESILIENTE" },
+          "title": { "en": "Works if the server is down", "es": "Funciona si el servidor cae" },
+          "text": { "en": "The last verified copy keeps running from local storage.", "es": "La última copia verificada sigue funcionando desde tu navegador." }
+        }
+      ]
+    },
+    {
+      "id": "verify",
+      "type": "terminal",
+      "title": { "en": "Verify the installer", "es": "Verifica el instalador" },
+      "lines": [
+        "$ sha256sum loader.user.js",
+        "93540cdc4a214c556a8f30def445ec985f03145244c4b0e43aa86f9ad400da82  loader.user.js"
+      ]
+    },
+    {
+      "id": "h-data",
+      "type": "heading",
+      "number": "05",
+      "kicker": { "en": "PRIVACY", "es": "PRIVACIDAD" },
+      "title": { "en": "Your data", "es": "Tus datos" },
+      "icon": "users"
+    },
+    {
+      "id": "h-help",
+      "type": "heading",
+      "number": "06",
+      "kicker": { "en": "USER GUIDE", "es": "GUÍA DE USO" },
+      "title": { "en": "If something goes wrong", "es": "Si algo sale mal" },
+      "icon": "book"
+    },
+    {
+      "id": "support",
+      "type": "buttons",
+      "items": [
+        { "label": { "en": "Report an issue", "es": "Reportar un problema" }, "href": "https://github.com/robgallardof/kglacer-macro-dist/issues", "icon": "flag", "small": true },
+        { "label": { "en": "Licenses", "es": "Licencias" }, "href": "NOTICE.md", "icon": "file", "small": true }
+      ]
+    },
+    {
+      "id": "back",
+      "type": "buttons",
+      "items": [
+        { "label": { "en": "Back to top", "es": "Volver al inicio" }, "href": "#top", "icon": "arrow-up", "small": true }
+      ]
+    }
+  ]
+}

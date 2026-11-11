@@ -1,96 +1,168 @@
-<p align="right"><b>English</b> · <a href="README.es.md">Español</a></p>
+<a id="top"></a>
+
+<!-- kit:lang -->
+<p align="right"><a href="README.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/lang-en-01-dark.svg" /><img src="assets/readme-builder/kit/lang-en-01-light.svg" alt="English" height="34" /></picture></a>&nbsp;
+<a href="README.es.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/lang-en-02-dark.svg" /><img src="assets/readme-builder/kit/lang-en-02-light.svg" alt="Español" height="34" /></picture></a></p>
+<!-- /kit:lang -->
+
+<p align="center"><img src="assets/readme-builder/kit/logo.svg" width="88" height="88" alt="KGlacerMacro" /></p>
 
 <h1 align="center">KGlacerMacro</h1>
 
-<p align="center">
-  Load your images, organize templates and work on <a href="https://wplace.live">wplace.live</a> from one panel.<br>
-  This repository hosts the <b>official signed installer</b>.
-</p>
+<!-- kit:hero -->
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/hero-en-dark.svg" /><img src="assets/readme-builder/kit/hero-en-light.svg" alt="Install once, stay up to date" width="100%" /></picture></p>
+<!-- /kit:hero -->
 
-<p align="center">
-  <a href="https://raw.githubusercontent.com/robgallardof/kglacer-macro-dist/main/loader.user.js"><b>⬇ Install KGlacerMacro</b></a>
-  &nbsp;·&nbsp;
-  <a href="#companion-extension">Companion extension</a>
-  &nbsp;·&nbsp;
-  <a href="#troubleshooting">Troubleshooting</a>
-</p>
+<!-- kit:nav -->
+<p align="center"><a href="#install"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-en-01-dark.svg" /><img src="assets/readme-builder/kit/nav-en-01-light.svg" alt="01 Install" height="34" /></picture></a>&nbsp;
+<a href="#updates"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-en-02-dark.svg" /><img src="assets/readme-builder/kit/nav-en-02-light.svg" alt="02 Updates" height="34" /></picture></a>&nbsp;
+<a href="#companion"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-en-03-dark.svg" /><img src="assets/readme-builder/kit/nav-en-03-light.svg" alt="03 Extension" height="34" /></picture></a>&nbsp;
+<a href="#security"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-en-04-dark.svg" /><img src="assets/readme-builder/kit/nav-en-04-light.svg" alt="04 Security" height="34" /></picture></a>&nbsp;
+<a href="#help"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/nav-en-05-dark.svg" /><img src="assets/readme-builder/kit/nav-en-05-light.svg" alt="Help" height="34" /></picture></a></p>
+<!-- /kit:nav -->
 
----
+Load your images, organize templates and work on [wplace.live](https://wplace.live) from one panel. This repository hosts the **official signed installer**: it downloads each release, checks its signature and only then runs it.
 
-## Install
+<!-- kit:downloads -->
+<p align="center"><a href="https://raw.githubusercontent.com/robgallardof/kglacer-macro-dist/main/loader.user.js"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/downloads-en-01-dark.svg" /><img src="assets/readme-builder/kit/downloads-en-01-light.svg" alt="Install KGlacerMacro" height="44" /></picture></a>&nbsp;
+<a href="https://chromewebstore.google.com/detail/gcalenpjmijncebpfijmoaglllgpjagf"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/downloads-en-02-dark.svg" /><img src="assets/readme-builder/kit/downloads-en-02-light.svg" alt="Tampermonkey Beta" height="44" /></picture></a></p>
+<!-- /kit:downloads -->
 
-1. Use a **desktop Chromium browser** (Chrome, Edge, Brave, Opera / Opera GX or Vivaldi).
+<!-- kit:facts -->
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/facts-en-dark.svg" /><img src="assets/readme-builder/kit/facts-en-light.svg" alt="Ed25519 signed releases · SHA-256 checked before running · Auto background updates · Offline last verified copy" width="100%" /></picture></p>
+<!-- /kit:facts -->
+
+![Illustrative KGlacerMacro panel layout](assets/guide/desktop-en.svg)
+
+<sub>The illustration shows an example layout; it is not a screenshot of a live session.</sub>
+
+<!-- kit:wave -->
+<p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>
+<!-- /kit:wave -->
+
+<a id="install"></a>
+
+<!-- kit:h-install -->
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/h-install-en-dark.svg" /><img src="assets/readme-builder/kit/h-install-en-light.svg" alt="Install in four steps" width="100%" /></picture></p>
+<!-- /kit:h-install -->
+
+1. Use a **desktop Chromium browser**: Chrome, Edge, Brave, Opera / Opera GX or Vivaldi.
 2. Install **[Tampermonkey Beta](https://chromewebstore.google.com/detail/gcalenpjmijncebpfijmoaglllgpjagf)**.
-3. On Chrome 138 or newer, open `chrome://extensions`, click **Details** on Tampermonkey
-   and turn on **Allow User Scripts**.
-4. Click **[Install KGlacerMacro](https://raw.githubusercontent.com/robgallardof/kglacer-macro-dist/main/loader.user.js)**.
-   Tampermonkey opens its install page. Click **Install**.
-   - **Already using KGlacerMacro?** Tampermonkey shows **Update** instead. Your images,
-     templates and settings are kept.
-5. Open or reload [wplace.live](https://wplace.live). The first load downloads the current
-   release, and later loads start instantly from the verified local copy.
+3. Open your browser's extensions page, click **Details** on Tampermonkey and turn on **Allow User Scripts** (Chrome 138 and newer):
+
+<!-- kit:browser-pages -->
+<p align="center"><a href="chrome://extensions"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/browser-pages-en-01-dark.svg" /><img src="assets/readme-builder/kit/browser-pages-en-01-light.svg" alt="Chrome / Brave" height="34" /></picture></a>&nbsp;
+<a href="edge://extensions"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/browser-pages-en-02-dark.svg" /><img src="assets/readme-builder/kit/browser-pages-en-02-light.svg" alt="Edge" height="34" /></picture></a>&nbsp;
+<a href="opera://extensions"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/browser-pages-en-03-dark.svg" /><img src="assets/readme-builder/kit/browser-pages-en-03-light.svg" alt="Opera / Opera GX" height="34" /></picture></a>&nbsp;
+<a href="vivaldi://extensions"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/browser-pages-en-04-dark.svg" /><img src="assets/readme-builder/kit/browser-pages-en-04-light.svg" alt="Vivaldi" height="34" /></picture></a></p>
+<!-- /kit:browser-pages -->
+
+4. Click **[Install KGlacerMacro](https://raw.githubusercontent.com/robgallardof/kglacer-macro-dist/main/loader.user.js)** and then **Install** on the Tampermonkey page.
+
+Open or reload [wplace.live](https://wplace.live). The first load downloads the current release; later loads start instantly from the verified copy in your browser.
+
+> **Already using KGlacerMacro?** Tampermonkey shows **Update** instead of Install. Your images, templates and settings are kept.
 
 Firefox, Safari and mobile browsers are not supported.
 
-## Updates
+<!-- kit:wave -->
+<p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>
+<!-- /kit:wave -->
 
-They are automatic. When a new version is published, KGlacerMacro downloads it in the
-background and shows **"… is ready. Reload the page to use it."** Reload when it suits you.
+<a id="updates"></a>
 
-The installer itself (`loader.user.js`) rarely changes. Tampermonkey updates it from this
-repository.
+<!-- kit:h-updates -->
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/h-updates-en-dark.svg" /><img src="assets/readme-builder/kit/h-updates-en-light.svg" alt="Updates take care of themselves" width="100%" /></picture></p>
+<!-- /kit:h-updates -->
 
-## Companion extension
+New versions download in the background. When one is ready, the page shows **"KGlacerMacro … is ready. Reload the page to use it."** Reload whenever it suits you.
 
-Automatic input needs the optional **KGlacer Input Companion**. The panel shows a download
-button for the version that matches your release. Then:
+The installer itself (`loader.user.js`) rarely changes; Tampermonkey keeps it up to date from this repository.
 
-1. Unzip it, open `chrome://extensions`, enable **Developer mode** and click **Load unpacked**.
-2. Select the `kglacer-input-companion` folder.
-3. On the wplace.live tab, click the extension icon to enable input for that tab, then use
-   **Test connection** in the panel.
+<!-- kit:wave -->
+<p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>
+<!-- /kit:wave -->
 
-## How releases are protected
+<a id="companion"></a>
 
-Each official release is signed with the maintainer's **Ed25519** key. The installer pins
-the public key (its id is in the script header) and, on every page load:
+<!-- kit:h-companion -->
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/h-companion-en-dark.svg" /><img src="assets/readme-builder/kit/h-companion-en-light.svg" alt="Connect the companion" width="100%" /></picture></p>
+<!-- /kit:h-companion -->
 
-- verifies the signature of the release manifest,
-- checks the size and **SHA-256** hash of the application before running it,
-- refuses to install a version older than one it already trusted,
-- starts the application exactly once.
+Automatic input uses the optional **KGlacer Input Companion**. The panel's **Download extension ZIP** button always matches your release.
 
-If anything fails, **nothing is run** and you see a short error. If the release server is
-unreachable, the last verified version keeps working.
+1. Unzip it, open the extensions page, enable **Developer mode** and click **Load unpacked**.
+2. Select the `kglacer-input-companion` folder that contains `manifest.json`.
+3. On the wplace.live tab, click the extension icon to turn input on for that tab.
+4. In the panel, go to **Config** and click **Test connection**.
 
-**What this does not mean:** signing proves where a release comes from and that it was
-not altered. It does not hide the code. Everything that runs in your browser can be
-inspected, and you are welcome to read it. The installer is deliberately not minified.
+<!-- kit:wave -->
+<p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>
+<!-- /kit:wave -->
 
-### Verify the installer yourself
+<a id="security"></a>
 
-Every release note lists the SHA-256 of `loader.user.js`:
+<!-- kit:h-security -->
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/h-security-en-dark.svg" /><img src="assets/readme-builder/kit/h-security-en-light.svg" alt="How releases are protected" width="100%" /></picture></p>
+<!-- /kit:h-security -->
 
-```sh
-sha256sum loader.user.js                    # Linux / macOS
-certutil -hashfile loader.user.js SHA256    # Windows
-```
+Every official release is signed with the maintainer's key. The installer pins the public key (its id is in the script header) and checks every release on your machine before running it.
 
-## Your data
+<!-- kit:protections -->
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/protections-en-dark.svg" /><img src="assets/readme-builder/kit/protections-en-light.svg" alt="Only official releases: The manifest must carry a valid Ed25519 signature from the pinned key. · Nothing altered on the way: Size and SHA-256 are checked before any code runs. · Never back to an old version: Releases older than one already trusted are refused. · Works if the server is down: The last verified copy keeps running from local storage." width="100%" /></picture></p>
+<!-- /kit:protections -->
 
-KGlacerMacro signs you in through its Control API and, as stated in the script metadata,
-syncs your wplace session token (`j`) through it. Only install it if you accept that.
+If a check fails, **nothing is run** and you see a short message. The installer is deliberately not minified, so you can read exactly what it does.
 
-## Troubleshooting
+Signing proves where a release comes from and that it was not altered. It does **not** hide the code: everything that runs in your browser can be inspected.
 
-| Message or symptom | What to do |
+Every release note lists the installer's SHA-256. Compare it with your copy (`certutil -hashfile loader.user.js SHA256` on Windows):
+
+<!-- kit:verify -->
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/verify-en-dark.svg" /><img src="assets/readme-builder/kit/verify-en-light.svg" alt="$ sha256sum loader.user.js / 93540cdc4a214c556a8f30def445ec985f03145244c4b0e43aa86f9ad400da82  loader.user.js" width="100%" /></picture></p>
+<!-- /kit:verify -->
+
+<!-- kit:wave -->
+<p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>
+<!-- /kit:wave -->
+
+<a id="data"></a>
+
+<!-- kit:h-data -->
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/h-data-en-dark.svg" /><img src="assets/readme-builder/kit/h-data-en-light.svg" alt="Your data" width="100%" /></picture></p>
+<!-- /kit:h-data -->
+
+KGlacerMacro signs you in through its Control API and, as stated in the script metadata, syncs your wplace session token (`j`) through it. Only install it if you accept that.
+
+<!-- kit:wave -->
+<p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>
+<!-- /kit:wave -->
+
+<a id="help"></a>
+
+<!-- kit:h-help -->
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/h-help-en-dark.svg" /><img src="assets/readme-builder/kit/h-help-en-light.svg" alt="If something goes wrong" width="100%" /></picture></p>
+<!-- /kit:h-help -->
+
+| What you see | What to do |
 | --- | --- |
 | "could not be verified or downloaded" | Nothing unverified was run. Check your connection and reload. |
-| "needs loader … or newer" | Tampermonkey → Dashboard → select KGlacerMacro → **Check for updates**. |
-| "An older release … was rejected" | No action needed. You keep the verified release you have. |
-| Nothing happens on wplace.live | Make sure **Allow User Scripts** is on (step 3) and the script is enabled in Tampermonkey. |
-| Still stuck | Open the console (F12) and send the lines starting with `[KGM][Loader]`. |
+| "needs loader … or newer" | Tampermonkey → Dashboard → KGlacerMacro → **Check for updates**. |
+| "An older release … was rejected" | Nothing to do: you keep the verified release you already have. |
+| Nothing happens on wplace.live | Check that **Allow User Scripts** is on and the script is enabled in Tampermonkey. |
+| Still stuck | Press F12 and include the console lines starting with `[KGM][Loader]` in your report. |
 
-## License
+<!-- kit:support -->
+<p align="center"><a href="https://github.com/robgallardof/kglacer-macro-dist/issues"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/support-en-01-dark.svg" /><img src="assets/readme-builder/kit/support-en-01-light.svg" alt="Report an issue" height="34" /></picture></a>&nbsp;
+<a href="NOTICE.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/support-en-02-dark.svg" /><img src="assets/readme-builder/kit/support-en-02-light.svg" alt="Licenses" height="34" /></picture></a></p>
+<!-- /kit:support -->
 
-See [NOTICE.md](NOTICE.md).
+<!-- kit:wave -->
+<p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>
+<!-- /kit:wave -->
+
+<!-- kit:back -->
+<p align="center"><a href="#top"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/back-en-01-dark.svg" /><img src="assets/readme-builder/kit/back-en-01-light.svg" alt="Back to top" height="34" /></picture></a></p>
+<!-- /kit:back -->
+
+<p align="center"><a href="https://github.com/robgallardof"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/brand/signature-es-dark.svg" /><img src="assets/readme/brand/signature-es-light.svg" alt="Roberto Gallardo · KGlacerMacro" width="100%" /></picture></a></p>

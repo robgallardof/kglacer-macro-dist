@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         kglacer-macro
 // @namespace    https://github.com/robgallardof
-// @version      7.0.0
+// @version      7.0.1
 // @description  Signed loader: downloads official KGlacerMacro releases and runs them only after Ed25519 and SHA-256 verification.
 // @author       robgallardof + contributors
 // @license      MPL-2.0
@@ -25,7 +25,7 @@
 // @connect      releases.robertogallardo.dev
 // ==/UserScript==
 
-// Loader 7.0.0. Release endpoint: https://releases.robertogallardo.dev/
+// Loader 7.0.1. Release endpoint: https://releases.robertogallardo.dev/
 // Pinned release keys: kgm-2026-11
 // Third-party code: @noble/ed25519 and @noble/hashes (MIT, Paul Miller).
 
@@ -1363,7 +1363,7 @@
   }
 
   // src/loader/main.ts
-  var config = { appName: "kglacer-macro", loaderVersion: "7.0.0", baseUrl: "https://releases.robertogallardo.dev/", trustedKeys: [{ id: "kgm-2026-11", publicKey: "HqWHYeNNoZZBVj1yACwzyMVRvZXCzbdf6Zzwr4umjo8=" }] };
+  var config = { appName: "kglacer-macro", loaderVersion: "7.0.1", baseUrl: "https://releases.robertogallardo.dev/", trustedKeys: [{ id: "kgm-2026-11", publicKey: "HqWHYeNNoZZBVj1yACwzyMVRvZXCzbdf6Zzwr4umjo8=" }] };
   var LOG_PREFIX = "[KGM][Loader]";
   var REQUEST_TIMEOUT_MS = 20000;
   var ONCE_FLAG = Symbol.for("kglacer-macro.loader.started");
@@ -1389,6 +1389,13 @@
       });
     });
   }
+  function wrapApplication(release, key, names) {
+    const property = JSON.stringify(key);
+    return `(function(){var s=document.currentScript,h=s&&s[${property}];if(!h)return;` + `try{delete s[${property}]}catch(e){}h.done=true;` + `(function(${names.join(",")}){
+${release.application}
+}).apply(undefined,h.values)})()
+` + `//# sourceURL=kglacer-macro-${release.manifest.version}.js`;
+  }
   function start(release) {
     const scope = globalThis;
     if (scope[ONCE_FLAG])
@@ -1401,10 +1408,58 @@
       unsafeWindow: typeof unsafeWindow === "undefined" ? window : unsafeWindow
     };
     const names = ["window", "self", "globalThis", "unsafeWindow", "GM_info", "GM", "GM_cookie", "KGM_GRANTS", "KGM_CORE_WASM"];
-    const values = [window, self, globalThis, grants.unsafeWindow, grants.GM_info, grants.GM, grants.GM_cookie, grants, release.core];
-    const run = new Function(...names, `${release.application}
-//# sourceURL=kglacer-macro-${release.manifest.version}.js`);
-    run.apply(undefined, values);
+    const handoff = {
+      values: [window, self, globalThis, grants.unsafeWindow, grants.GM_info, grants.GM, grants.GM_cookie, grants, release.core],
+      done: false
+    };
+    const key = `__kgm_${Array.from(crypto.getRandomValues(new Uint8Array(16)), (byte) => byte.toString(16).padStart(2, "0")).join("")}`;
+    const code = wrapApplication(release, key, names);
+    const root = document.head ?? document.documentElement;
+    if (root) {
+      inject(release, code, key, handoff, root);
+      return;
+    }
+    const observer = new MutationObserver(() => {
+      const parent = document.head ?? document.documentElement;
+      if (!parent)
+        return;
+      observer.disconnect();
+      inject(release, code, key, handoff, parent);
+    });
+    observer.observe(document, { childList: true, subtree: true });
+  }
+  function inject(release, code, key, handoff, parent) {
+    const inline = document.createElement("script");
+    inline[key] = handoff;
+    inline.textContent = code;
+    parent.append(inline);
+    inline.remove();
+    delete inline[key];
+    if (handoff.done)
+      return;
+    const url = URL.createObjectURL(new Blob([code], { type: "text/javascript" }));
+    const external = document.createElement("script");
+    external[key] = handoff;
+    const cleanup = () => {
+      URL.revokeObjectURL(url);
+      external.remove();
+      delete external[key];
+    };
+    external.onload = () => {
+      cleanup();
+      if (!handoff.done)
+        report({ kind: "start-failed", version: release.manifest.version, reason: "Blob script ran without the handoff" });
+    };
+    external.onerror = () => {
+      cleanup();
+      report({
+        kind: "start-failed",
+        version: release.manifest.version,
+        reason: "The page Content Security Policy blocks both inline and blob: scripts"
+      });
+    };
+    external.src = url;
+    parent.append(external);
   }
   function notify(message, tone) {
     const show = () => {
