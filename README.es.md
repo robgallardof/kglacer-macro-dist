@@ -119,7 +119,7 @@ La firma demuestra de dónde viene una versión y que nadie la alteró. **No** o
 Cada nota de versión incluye el SHA-256 del instalador. Compáralo con tu copia (`certutil -hashfile loader.user.js SHA256` en Windows):
 
 <!-- kit:verify -->
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/verify-es-dark.svg" /><img src="assets/readme-builder/kit/verify-es-light.svg" alt="$ sha256sum loader.user.js / 93540cdc4a214c556a8f30def445ec985f03145244c4b0e43aa86f9ad400da82  loader.user.js" width="100%" /></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/verify-es-dark.svg" /><img src="assets/readme-builder/kit/verify-es-light.svg" alt="$ sha256sum loader.user.js / 3d2e65ce5b9e13bd0c8509199ccc3ee655d9a93e18e8e644c17b2ad45c4e5590  loader.user.js" width="100%" /></picture></p>
 <!-- /kit:verify -->
 
 <!-- kit:wave -->
